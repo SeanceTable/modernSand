@@ -10,7 +10,7 @@
 
 Check out `modernSand.js` in action on these websites:
 
-* **Main Function Example:** [https://quaz.fi](https://quaz.fi)
+* **Main Function Example:** [https://quaz.fi/go/sandfwv2/](https://quaz.fi/go/sandfwv2/)
 * **Example PC Building Website:** [https://go.quaz.fi/sandpc1/](https://go.quaz.fi/sandpc1/)
 * **Example AI Chat Interface:** [https://quaz.fi/riddlev1/](https://quaz.fi/riddlev1/)
 
