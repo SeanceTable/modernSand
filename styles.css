@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#night-sky {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+#moon {
+  display: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 6px 2px #fff7;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+#star-buttons-container, #canvas-container {
+  position: relative;
+  z-index: 2;
+}
+
+#star-buttons-container {
+  position: relative;
+  z-index: 1000 !important;
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#pixijs-container, #threejs-container {
+  z-index: 3;
+}
+
+#threejs-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  z-index: 3;
+  display: none;
+}
+
+/* CSS Star Button */
+.star-button-css {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle at 60% 30%, #aeeaff 60%, #0077be 100%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 32px 12px #00cfff88, 0 0 64px 24px #00bfff44;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  margin: 0 10px;
+  overflow: visible;
+  transition: box-shadow 0.2s;
+}
+.star-button-css::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff8, #00bfff00 70%);
+  z-index: 2;
+  pointer-events: none;
+}
+.star-button-css::after {
+  content: none;
+}
+.star-button-css:hover, .star-button-css:focus {
+  box-shadow: 0 0 48px 24px #00eaffcc, 0 0 96px 32px #00bfffcc;
+}
+.star-button-css .orb-gloss {
+  position: absolute;
+  top: 12%;
+  left: 18%;
+  width: 60%;
+  height: 30%;
+  background: radial-gradient(circle at 50% 0%, #fff9 60%, #fff0 100%);
+  border-radius: 50%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+  max-width: 100vw;
+  overflow: auto;
+}
+
+#sand-canvas {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  max-width: 98vw;
+  max-height: 68vh;
+  border: none;
+}
+
+/* Magic glow for sand pixels (used in canvas, for reference) */
+.sand-glow {
+  box-shadow: 0 0 8px 4px #7fffd4, 0 0 24px 8px #fff70088;
+} 

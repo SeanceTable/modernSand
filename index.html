@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sand Directory</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<script src="./jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/pixi.js@7.2.4/dist/pixi.min.js"></script>
+		<script type="importmap">
+		  {
+		    "imports": {
+		      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+		      "FBXLoader": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/FBXLoader.js",
+		      "fflate": "https://cdn.jsdelivr.net/npm/fflate@0.8.2/esm/index.mjs",
+		      "NURBSCurve": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/curves/NURBSCurve.js"
+		    }
+		  }
+		</script>
+
+		<script type="module" src="./modernSand.js"></script>
+	</head>
+	<body>
+		<div id="night-sky">
+			</div>
+		<div id="star-buttons-container">
+			</div>
+		<div id="canvas-container">
+			<canvas id="sand-canvas"></canvas>
+		</div>
+		</body>
+</html>
